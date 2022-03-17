@@ -1,0 +1,39 @@
+{
+  "name": "projeto_final2",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido para conclusão do módulo 4. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "env-cmd -f .env.production node server.js",
+    "dev": "env-cmd -f .env.development nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nadiamizael/apImobiliaria__.git"
+  },
+  "author": "Nádia Mizael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nadiamizael/apImobiliaria__/issues"
+  },
+  "homepage": "https://github.com/Nadiamizael/apImobiliaria__#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "docker-compose": "^0.23.17",
+    "dotenv": "^16.0.0",
+    "env-cmd": "^10.1.0",
+    "express": "^4.17.3",
+    "pg": "^8.7.3",
+    "sequelize": "^6.17.0",
+    "swagger-ui-express": "^4.3.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "sequelize-cli": "^6.4.1"
+  },
+  "type": "module"
+}
