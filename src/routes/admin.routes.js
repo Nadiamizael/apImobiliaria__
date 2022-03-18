@@ -1,11 +1,11 @@
-import { Router } from "express";
+import express from "express";
 import AdminController from "../controllers/Admin.controller.js";
 
-const router = Router();
+const router = express.Router();
 
 router.get("/admin", AdminController.getAllAdmins);
 router.get("/admin/:id", AdminController.getOneAdmin);
-router.post("/admin/:cpf", AdminController.registerAdmin);
+router.post("/admin/register", AdminController.registerAdmin);
 router.put("/admin/:cpf", AdminController.updateAdmin);
 router.delete("/admin/:id", AdminController.deleteAdmin);
 
