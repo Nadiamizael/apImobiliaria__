@@ -1,20 +1,17 @@
 import { Sequelize } from "sequelize";
-import "dotenv/config";
+import "dotenv-safe/config.js";
 
-const sequelize = new Sequelize(process.env.DATABASE_URL, {
-  dialectOptions: {
-    ssl: {
-      require: true,
-      rejectUnauthorized: false,
-    },
-  },
-});
+export const sequelize = new Sequelize(process.env.DATABASE_URL);
 
-try {
-  sequelize.authenticate();
-  console.log("Banco conectado");
-} catch (error) {
-  console.log(`Não foi possível conectar: ${error}`);
+async function conectar() {
+  try {
+    await sequelize.authenticate();
+    console.log("Banco conectado!");
+  } catch (err) {
+    console.log("Não foi possível conectar:", err);
+  }
 }
+
+conectar();
 
 export default sequelize;

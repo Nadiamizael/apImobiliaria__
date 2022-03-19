@@ -1,24 +1,15 @@
+import "dotenv-safe/config.js";
 import express from "express";
-import * as dotenv from "dotenv";
 import sequelize from "./src/db/connection.js";
-import cors from "cors";
-import bodyParser from "body-parser";
+import Admin from "./src/models/Admin.model.js";
+import router from "./src/routes/admin.routes.js";
 
-dotenv.config({
-  path: `.env.${process.env.NODE_ENV}`,
-});
+const port = process.env.port;
 
 const app = express();
 
-app.use(bodyParser.json());
-
-app.use(
-  cors({
-    origin: "*",
-  })
-);
-
-const port = process.env.PORT || 3000;
+app.use(express.json());
+app.use("/admin", router);
 
 sequelize
   .sync()
