@@ -6,7 +6,7 @@ const router = express.Router();
 router.get("/", AdminController.getAllAdmins);
 router.get("/:id", AdminController.getAdminById);
 router.post("/register", AdminController.registerAdmin);
-router.put("/:id", AdminController.updateAdmin);
-router.delete("/:id", AdminController.deleteAdmin);
+router.put("/:id", AdminController.updateAdminById);
+router.delete("/:id", AdminController.deleteAdminById);
 
 export default router;

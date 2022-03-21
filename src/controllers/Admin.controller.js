@@ -40,7 +40,9 @@ export class AdminController {
   // método read
   static async getAllAdmins(req, res) {
     try {
-      const allAdmin = await Admin.findAll();
+      const allAdmin = await Admin.findAll({
+        attributes: { exclude: ["password"] },
+      });
       return res.status(200).json(allAdmin);
     } catch (error) {
       return res.status(400).json(error.message);
@@ -54,6 +56,7 @@ export class AdminController {
         where: {
           id: id,
         },
+        attributes: { exclude: ["password"] },
       });
       return res.status(200).json(oneAdmin);
     } catch (error) {
@@ -62,12 +65,16 @@ export class AdminController {
   }
 
   // método update
-  static async updateAdmin(req, res) {
+
+  static async updateAdminById(req, res) {
     const { id } = req.params;
     const updateInfo = req.body;
     try {
       await Admin.update(updateInfo, { where: { id: id } });
-      const updateAdmin = await Admin.findOne({ where: { id: id } });
+      const updateAdmin = await Admin.findOne({
+        where: { id: id },
+        attributes: { exclude: ["password"] },
+      });
       return res.status(200).json(updateAdmin);
     } catch (error) {
       return res.status(400).json(error.message);
@@ -75,7 +82,7 @@ export class AdminController {
   }
 
   // método delete
-  static async deleteAdmin(req, res) {
+  static async deleteAdminById(req, res) {
     const { id } = req.params;
     try {
       await Admin.destroy({ where: { id: id } });
