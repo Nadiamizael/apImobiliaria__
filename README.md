@@ -18,12 +18,9 @@ Esta aplicação refere-se ao cadastro, listagem , atualização e deleção de 
 
 ### Para executar o projeto :
 
-- Você precisa ter instalada em sua máquina a versão 16.14.0 [Node.js](https://nodejs.org/en/), [Insomnia](https://insomnia.rest/download), e caso queira trabalhar no código também será necessário ter um editor de código como o [VSCode](https://code.visualstudio.com/).
+- Você precisa ter instalado em sua máquina a versão 16.14.0 [Node.js](https://nodejs.org/en/), [Insomnia](https://insomnia.rest/download), e caso queira trabalhar no código também será necessário ter um editor de código como o [VSCode](https://code.visualstudio.com/).
 
-  ```bash
-
-  ```
-
+```js
 # Clone o segunte repositório
 
 $ git clone https://github.com/Nadiamizael/apImobiliaria__.git
@@ -61,13 +58,11 @@ $ npm run dev
 
 ```
 
-
-
 ### Rotas Disponíveis
 
 - POST:
-  - /admin/register 📌 A rota deverá criar um novo Administrador com as informações passadas na requisição.
 
+  - /admin/register 📌 A rota deverá criar um novo Administrador com as informações passadas na requisição.
 
 - GET:
 
@@ -76,13 +71,10 @@ $ npm run dev
 
 - PUT:
 
-  - /admin/:id 📌 A rota deverá atualizar todos os atributos de um Administrador cadastrados.
+  - /admin/:id 📌 A rota deverá atualizar todos os atributos do um Administrador escolhido pelo ID. Será necessário preencher todos os atributos para o novo administrador com exceção do ID, que não é alterado manualmente.
 
 - DELETE:
-  - /admin/:id  📌 A rota deverá deletar  um Administrador cadastrado no banco de dados.
-
-
-
+  - /admin/:id 📌 A rota deverá deletar um Administrador cadastrado no banco de dados. Será necessário passar o id do administrador que deseja deletar.
 
 ### Tecnologias utilizadas
 
@@ -92,16 +84,14 @@ $ npm run dev
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Insomnia](https://img.shields.io/badge/Insomnia-black?style=for-the-badge&logo=insomnia&logoColor=5849BE)
 
-
 - NodeJS
 - Express
 - Sequelize ORM
 - JavaScript
 - Insomnia
 
-
 **Desenvolvido por <a href="https://www.linkedin.com/in/nadiamizael/">Nádia Mizael</a> .**
 
-
+```
 
 ```
