@@ -123,6 +123,4 @@ $ npm start
 
 ### **Desenvolvido por <a href="https://www.linkedin.com/in/nadiamizael/">Nádia Mizael</a> .**
 
-```
-
-```
+---
