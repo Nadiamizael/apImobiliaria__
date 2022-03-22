@@ -5,7 +5,7 @@ import Admin from "./src/models/Admin.model.js";
 import router from "./src/routes/admin.routes.js";
 
 dotenv.config();
-const port = process.env.port || 3001;
+const port = process.env.PORT || 3001;
 
 const app = express();
 
