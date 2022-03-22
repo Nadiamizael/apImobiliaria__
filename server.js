@@ -1,10 +1,9 @@
-import "dotenv-safe/config.js";
 import express from "express";
 import sequelize from "./src/db/connection.js";
 import Admin from "./src/models/Admin.model.js";
 import router from "./src/routes/admin.routes.js";
 
-const port = process.env.port;
+const port = process.env.port || 3001;
 
 const app = express();
 
