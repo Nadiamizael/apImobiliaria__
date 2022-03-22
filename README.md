@@ -37,6 +37,7 @@ $ npm install
 
 "dependencies": {
     "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "sequelize": "^6.17.0",
     "sqlite3": "^5.0.2"
@@ -58,6 +59,7 @@ $ npm start
 "cpf" : "...",
 "role": "..."
 }
+
 
 ```
 
@@ -94,6 +96,14 @@ $ npm start
   </br>
   </br>
 
+### 🔗 Deploy na Heroku
+
+-[ApImobiliaria\_\_](https://apimobiliaria-mod4.herokuapp.com/admin)
+
+</br>
+</br>
+</br>
+
 ### Tecnologias utilizadas
 
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
@@ -111,7 +121,7 @@ $ npm start
 </br>
 </br>
 
-## **Desenvolvido por <a href="https://www.linkedin.com/in/nadiamizael/">Nádia Mizael</a> .**
+### **Desenvolvido por <a href="https://www.linkedin.com/in/nadiamizael/">Nádia Mizael</a> .**
 
 ```
 
