@@ -51,17 +51,18 @@ export class AdminController {
 
   static async getAdminById(req, res) {
     const { id } = req.params;
-    try {
-      const oneAdmin = await Admin.findOne({
-        where: {
-          id: id,
-        },
-        attributes: { exclude: ["password"] },
-      });
-      return res.status(200).json(oneAdmin);
-    } catch (error) {
-      return res.status(500).json(error.message);
+
+    const oneAdmin = await Admin.findOne({
+      where: {
+        id: id,
+      },
+      attributes: { exclude: ["password"] },
+    });
+
+    if (!oneAdmin) {
+      return res.status(404).json("Admin não encontrado");
     }
+    return res.status(200).json(oneAdmin);
   }
 
   // método update
