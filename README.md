@@ -15,35 +15,38 @@ E os requisitos para a estruturação e entrega do projeto foram :
 - CRUD completo.
 
 Esta aplicação refere-se ao cadastro, listagem , atualização e deleção de Administradores.
+</br>
+</br>
 
-### Para executar o projeto :
+### 💻 Para executar o projeto :
 
 - Você precisa ter instalado em sua máquina a versão 16.14.0 [Node.js](https://nodejs.org/en/), [Insomnia](https://insomnia.rest/download), e caso queira trabalhar no código também será necessário ter um editor de código como o [VSCode](https://code.visualstudio.com/).
 
-```js
-# Clone o segunte repositório
+```bash
+# Clone o repositório
 
 $ git clone https://github.com/Nadiamizael/apImobiliaria__.git
 
 # Acesse o diretório
 
-$ cd projeto_final2
+$ cd apImobiliaria__
 
 # Instale as dependências necessárias
 
 $ npm install
 
 "dependencies": {
-"bcrypt": "^5.0.1",
-"dotenv-safe": "^8.2.0",
-"express": "^4.17.3",
-"sequelize": "^6.17.0",
-"sqlite3": "^5.0.2"
-},
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.3",
+    "sequelize": "^6.17.0",
+    "sqlite3": "^5.0.2"
+  },
 
 # Inicie o projeto
 
-$ npm run dev
+$ npm start
+
+
 
 # No Insomnia você irá realizar as requisições nas rotas utilizando os seguunter parâmetros:
 
@@ -58,11 +61,22 @@ $ npm run dev
 
 ```
 
-### Rotas Disponíveis
+### 🔎 Rotas Disponíveis/Estrutura da API :
 
 - POST:
 
-  - /admin/register 📌 A rota deverá criar um novo Administrador com as informações passadas na requisição.
+  - /admin/register 📌 A rota deverá criar um novo Administrador com as informações passadas na requisição.Será necessário preencher todas as informações.
+
+```js
+{
+"firstName":"...",
+"lastName": "...",
+"email": "...",
+"password": "...",
+"cpf" : "...",
+"role": "..."
+}
+```
 
 - GET:
 
@@ -71,10 +85,14 @@ $ npm run dev
 
 - PUT:
 
-  - /admin/:id 📌 A rota deverá atualizar todos os atributos do um Administrador escolhido pelo ID. Será necessário preencher todos os atributos para o novo administrador com exceção do ID, que não é alterado manualmente.
+  - /admin/:id 📌 A rota deverá atualizar as informações passadas no corpo da requisição para um Administrador escolhido pelo ID. Será possível atualizar um único dado ou preencher todos os atributos para o novo administrador, com exceção do ID, que não é alterado manualmente.
 
 - DELETE:
+
   - /admin/:id 📌 A rota deverá deletar um Administrador cadastrado no banco de dados. Será necessário passar o id do administrador que deseja deletar.
+
+  </br>
+  </br>
 
 ### Tecnologias utilizadas
 
@@ -90,7 +108,10 @@ $ npm run dev
 - JavaScript
 - Insomnia
 
-**Desenvolvido por <a href="https://www.linkedin.com/in/nadiamizael/">Nádia Mizael</a> .**
+</br>
+</br>
+
+## **Desenvolvido por <a href="https://www.linkedin.com/in/nadiamizael/">Nádia Mizael</a> .**
 
 ```
 
